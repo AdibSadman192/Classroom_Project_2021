@@ -1,0 +1,104 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+                Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                "Segoe UI Symbol";
+    padding: 0;
+    margin: 0;
+    background-color: rgb(223, 233, 235) ;
+}
+
+#Content-div{
+  position: absolute;
+  left: 30%;
+  right: 10%;
+}
+
+#layout-menu-div{
+  position: fixed;
+  overflow-y: scroll;
+  background: #64bd93;
+  border: 1px solid #dddddd;
+  padding-top: 0.5em;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 1.0em;
+  height: 100%; width: auto;
+  white-space: nowrap;
+  text-align: left;
+}
+
+
+
+#layout-menu a {
+    padding: 0px;
+    line-height: 2;
+    text-decoration: none ;
+ 
+}
+
+a:hover, a:hover > tt{
+    border-bottom: 1.25px #1a1e24 solid;
+    color: #ff0000;
+}
+
+#layout-menu a.current:link, #layout-menu a.current:visited {
+    color: #da1919;
+    font-weight: 600;
+}
+
+#layout-menu a:hover {
+    color: #41042e;
+    text-decoration: none;
+}
+
+div.menu-main {
+    margin-top: 14px;
+    padding-top: 8px;
+    padding-bottom: 0.1em;
+    padding-left: 5px;
+    padding-right: 25px;
+    font-size: 18px;
+    font-family: Garamond;
+    font-style: bold;
+    line-height: 2;
+    border-top: 0.8px solid #FFFFFF;
+    color: aliceblue;
+}
+
+div.menu-element {
+    font-size: 14px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+div.menu-element2 {
+    font-size: 12px;
+    padding-left: 40px;
+    padding-right: 25px;
+}
+.menu-main a {
+    color: aliceblue;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: rgb(130, 214, 214);
+}
+
+td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: left;
+
+    border: 1px solid #d1d5da;
+    line-height: 2;
+}
+
+@media print {
+    #printPageButton, #layout-menu-div{
+    display: none;
+
+    }
+
+    
