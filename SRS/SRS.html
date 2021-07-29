@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" > 
+
+        <title>SRS Report of CSE327 </title>
+
+        <style media="screen">
+          .hide-on-screen {display:none;}
+          .yesPrint, .noPrint {display:block;}
+      
+          @media print {
+          .noPrint {display:none;}
+          .hide-on-screen {display:block;}
+          }
+      </style>
+
+
+    </head>
+
+    <body>
+
+    
+
+        <table id="layout">
+            <tr valign="top">
+              <td id="layout-menu">
+
+                <div id="layout-menu-div"><div class="menu-category" style="color: aliceblue;">1. Introduction</div>
+
+                    <div class="menu-element"><a href=#1.1>1.1 Purpose</a></div>
+                    <div class="menu-element"><a href=#1.2>1.2 Document Conventions</a></div>
+                    <div class="menu-element"><a href=#1.3>1.3 Intended Audience and Reading Suggestions</a></div>
+                    <div class="menu-element"><a href=#1.4>1.4 Product Scope</a></div>
+                    <div class="menu-element"><a href=#1.5>1.5 References</a></div>
+
+                <div class="menu-main">2. Overall Description</div>
+
+                    <div class="menu-element"><a href=#2.1>2.1 Product Perspective</a></div>
+                    <div class="menu-element"><a href=#2.2>2.2 Product Functions</a></div>
+                    <div class="menu-element"><a href=#2.3>2.3 User Classes and Characteristics</a></div>
+                    <div class="menu-element"><a href=#2.4>2.4 Operating Environment</a></div>
+                    <div class="menu-element"><a href=#2.5>2.5 Design and Implementation Constraints</a></div>
+                    <div class="menu-element"><a href=#2.6>2.6 User Documentation</a></div>
+                    <div class="menu-element"><a href=#2.7>2.7 Assumptions and Dependencies</a></div>
+
+                <div class="menu-main">3. External Interface Requirements</div>
+
+                    <div class="menu-element"><a href=#3.1>3.1 User Interfaces</a></div>
+                    <div class="menu-element"><a href=#3.2>3.2 Hardware Interfaces</a></div>
+                    <div class="menu-element"><a href=#3.3>3.3 Software Interfaces</a></div>
+                    <div class="menu-element"><a href=#3.4>3.4 Communications Interfaces</a></div>
+
+                <div class="menu-main">4. System Features</div>
+
+                      <div class="menu-element2"><a href=#4.1>4.1 Description and Priority</a></div>
+                      <div class="menu-element2"><a href=#4.2>4.2 Stimulus/Response Sequences</a></div>
+                      <div class="menu-element2"><a href=#4.3>4.3 Functional Requirements</a></div>
+
+
+                <div class="menu-main">5. Other Nonfunctional Requirements</div>
+
+                    <div class="menu-element"><a href=#5.1>5.1 Performance Requirements</a></div>
+                    <div class="menu-element"><a href=#5.2>5.2 Safety Requirements</a></div>
+                    <div class="menu-element"><a href=#5.3>5.3 Security Requirements</a></div>
+                    <div class="menu-element"><a href=#5.4>5.4 Software Quality Attributes</a></div>
+                    <div class="menu-element"><a href=#5.5>5.5 Business Rules</a></div>
+
+                <div class="menu-main"><a href=#6>6. Other Requirements</a></div>
+
+
+                <div class="menu-main"><a href=#AP_A>Appendix A: Glossary</a></div>
+
+                <div class="menu-main"><a href=#AP_B>Appendix B: Analysis Models</a></div>
+
+                <div class="menu-main"><a href=#AP_C>Appendix C: To Be Determined List</a></div>
+
+              </div>
+            </td>
+
+            <td id="layout-content">
+
+
+            <div id="Content-div">
+              <div class="hide-on-screen" style=" background-color: rgb(223, 233, 235) ;">
+            <head >
+                <hr size="10" width=" 100%" color="black">
+
+                <tittle> <h1 align="right">  Software Requirements
+                Specification </br>
+
+
+                </tittle>
+                </head>
+
+                <body>
+
+                 <h2 align="right"> for </h4>
+                 <h2 align="right" >CSE327 Project  </h2>>
+               
+                 <h3 align="right"> Group Member :
+                    </br> Kazi Mahbub Jamil </br>
+                   Adib Sadman </br> Sanjida Angum </h1>
+                 <h3 align="right" >  North South University </h1>
+                 <h3 align="right" >   18-07-2021 </h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+               <br>
+                <br>
+                <br>
+                <br>
+              </div>
+
+                <div class="hide-on-screen">
+                <h3>Table of contents</h3>
+                <table width="450" border="2" cellpadding="1">
+                  <tbody>
+                  <tr>
+                  <td><strong>1. Introduction</strong><br>
+                  1.1 Purpose<br>
+                  1.2 Document conventions<br>
+                  1.3 Intended audience<br>
+                  1.4 Additional information<br>
+                  1.5 Contact information/SRS team members<br>
+                  1.6 References<br>
+                  <strong>2. Overall Description</strong><br>
+                  2.1 Product perspective<br>
+                  2.2 Product functions<br>
+                  2.3 User classes and characteristics<br>
+                  2.4 Operating environment<br>
+                  2.5 User environment<br>
+                  2.6 Design/implementation constraints<br>
+                  2.7 Assumptions and dependencies<br>
+                  <strong>3. External Interface Requirements</strong><br>
+                  3.1 User interfaces<br>
+                  3.2 Hardware interfaces<br>
+                  3.3 Software interfaces<br>
+                  3.4 Communication protocols and interfaces<br>
+                  <strong>4. System Feature</strong><br>
+                  4.1 Description and priority<br>
+                  4.2 Stimulus/Response Sequences<br>
+                  4.3 Functional requirements<br>
+
+                  <strong>5. Other Nonfunctional Requirements</strong><br>
+                  5.1 Performance requirements<br>
+                  5.2 Safety requirements<br>
+                  5.3 Security requirements<br>
+                  5.4 Software quality attributes<br>
+                  5.5 Project documentation<br>
+                  5.6 User documentation<br>
+                  <strong>6. Other Requirements</strong><br>
+                  Appendix A: Terminology/Glossary/Definitions list<br>
+                  Appendix B: To be determined</td>
+                  </tr>
+                  </tbody>
+                  </table>
+                <br>
+                </div>
+
+              <div><h1>1.Introduction</h1></div>
+
+                <div id="1.1">
+                  <h3>1.1 Purpose</h3>
+                  <p>
+                    We are aiming to build a Classroom which is super minimal so it's easy to learn, use, and share with other teachers, students, and families. It is crammed full of features and is always updating with new integrations that allow you to access lots of free-to-use tools aimed to help make teaching and learning better.
+                    While this isn't an LMS (Learning Management System), such as Blackboard, it complements many ideally and, in many cases, integrates as well. Yet as this Classroom becomes more powerful than ever, it is fast representing a new way to teach and manage the class online and remotely.
+                    
+                   </p>
+                  <br> <hr>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="1.2">
+                  <h3>1.2 Document Conventions</h3>
+                  <table style="width:100% " border="2">
+                    <tr>
+                      <th>Document Conventions</th>
+                      <th>Use</th>
+                    </tr>
+                    
+                    <tr>
+                      <td>DBMS</td>
+                      <td>Managing, storing, retrieving data</td>
+                    </tr>
+                    <tr>
+                      <td>API</td>
+                      <td>User interface allows applicants to interact</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>SOA</td>
+                      <td>communicate across different platforms and languages</td>
+                    </tr>
+                    <tr>
+                      <td>Classroom</td>
+                      <td>Classroom for teacher and student interaction and file uploading
+</td>
+                    </tr>
+                    <tr>
+                      <td>PDF Format</td>
+                      <td>Upload PDF file and open it automaticlly by system with file size limit</td>
+                    </tr>
+                    <tr>
+                      <td>Django</td>
+                      <td>Framework</td>
+                    </tr>
+                    <tr>
+                      <td>DMS</td>
+                      <td>Track, manage, store document</td>
+                    </tr>
+                  </table>
+                  <br> <hr>
+                </div>
+
+                <div id="1.3">
+                  <h3>1.3 Intended Audience and Reading Suggestions</h3>
+                  <p>This project is prototype for the digitized Classroom management system. We are going to implement it under the supervision of Dr. Nabeel Mohammed and after the compilation of the software entire university will be benefitted from it.</p>
+                  <br> <hr>
+                </div>
+
+                <div id="1.4">
+                  <h3>1.4 Product Scope</h3>
+                  <p> It's a short description of the project and purpose. Mainly focus on the objectives and vision of this project and also the bussiness
+                    strategy on this project. We also focus on the future developemt on available feature.</p>
+                  <br> <hr>
+                </div>
+
+                <div id="1.5">
+                  <h3>1.5 References</h3>
+                  <ul>
+                  <li><p>Software Requirements Specification document with example. Kerasio. Online available at <a href="https://keras.io/getting_started/" target="_blank">Getting started (keras.io)</a></p></li>
+
+                  <li><p>Software requirements specification. Gather software requirements. microTOOL <a href="https://www.microtool.de/en/knowledge-base/what-is-a-software-requirements-specification/" target="_blank">What is a software requirements specification? (microtool.de)</a></p></li>
+
+                  <li><p>Andrew Burak, Your Guide to Writing a Software Requirements Specification (SRS) Document. RELEVENT <a href="https://relevant.software/blog/software-requirements-specification-srs-document/" target="_blank">https://relevant.software/blog/software-requirements-specification-srs-document/</a></p></li>
+                  </ul>
+                  <br> <hr>
+
+                </div>
+
+                <br><br>
+
+              <div><h1>2. Overall Description</h1></div>
+
+                <div id="2.1">
+                  <h3>2.1 Product Perspective</h3>
+                  <p>
+                    One of the biggest benefits of Our Classroom is it’s simple to use and encourages collaboration between students and teachers. Teachers can create a class and list educational apps, such as assignments, in a few clicks. They can add students by sending them a code to join. Students can then see what assignments are due, participate in discussion forums or message the teacher (either in private or via group chat). Classroom integrates with many student information systems, along with other third-party applications, such as instructional tools, digital literacy solutions and coding software. And this management system will also track student activities and send them to teachers so that students always remain engaged with their studies.
+                  </p>
+                  <br> <hr>
+                </div>
+
+                <div id="2.2">
+                  <h3>2.2 Product Functions</h3>
+                  <p>
+<ol>
+
+<h4><li>Records Management </li></h4>
+<ul>
+  <li>Classroom Home </li>
+  <li>Public and Private Chat</li>
+  <li>Notification </li>
+  <li>Uploading Documents </li>
+  <li>Auto capture</li>
+  <li>Uploading assignment file in pdf format </li>
+  <li>Student Records</li>
+  <li>Automatic Archive </li>
+  <li>Generating Code</li>
+</ul>
+<h4><li> Accounts Management </li></h4>
+<ul>
+  <li>Unlimited  User Accounts, Profile picture Feature , User Management To Create New User and Link of User Account Profile </li>
+  <li>Password Reset Tool</li>
+  <li>Managing classroom for teachers </li>
+  
+</ul>
+<h4><li> Search and Retrieval Management </li></h4>
+<ul>
+<li> </li>
+<li> </li>
+</ul>
+<h4><li>Reports Management </li></h4>
+<ul>
+<li>Records Count </li>
+</ul>
+
+<h4><li>Notification Management </li></h4>
+<ul>
+<li>Email Notification </li>
+<li>View Real-Time Notification </li>
+</ul>
+
+<h4><li>System Management </li></h4>
+<ul>
+<li>Accessible in Web Browser,Supports Multiple Platforms,Viewable from Desktop, Tablet and Mobile </li>
+<li>Service Oriented Architecture (SOA) </li>
+<li>Policy for Brute Force Attacks </li>
+</ul>
+
+<h4><li>Backup and Recovery  </li></h4>
+
+<h4><li>Maintenance and Technical Support </li></h4>
+<ul>
+<li>Helpdesk Facility 24 x 7 days </li>
+</ul>
+</ol>
+                  </p>
+                  <br> <hr>
+                </div>
+
+                <div id="2.3">
+                  <h3>2.3 User Classes and Characteristics</h3>
+                  <p>
+<ol>
+
+<h4><li>Teacher</li> </h4>
+<p>
+<ul>
+<li>Account Creation,login </li>
+<li>Upload Files </li>
+<li>View Permitted Files </li>
+<li>Get notifications  </li>
+<li>Classroom Creation</li>
+<li>Code sending</li>
+
+</ul>
+</p>
+
+
+<h4><li>Student</li></h4>
+<p>
+<ul>
+<li>login</li>
+<li>Joining class</li>
+<li>Viewing PDF file</li>
+<li>uploading profile picture</li>
+<li>Real time notification on Any Activity on Classroom</li>
+<li>View Statistics</li>
+</ul>
+</p>
+
+<h4><li>Technical Expertise </li></h4>
+<p>
+<ul>
+<li>Perform technical operations</li>
+<li>Maintainance of the product </li>
+<li>Manages secutity</li>
+<li>System update</li>
+<li>Server Management</li>
+</ul>
+</p>
+
+<h4><li>Admin </li></h4>
+<p>
+<ul>
+<li>Creating User Accounts </li>
+<li>Account Management </li>
+<li>Records for files upload </li>
+<li>Assigning account for teachers </li>
+<li>Assigning and Managing groups for users </li>
+<li>Access Controll </li>
+<li>Data Retrieval and Recovery </li>
+<li>Password Reset </li>
+</ul>
+</p>
+
+</ol>
+
+
+
+                  </p>
+                  <br> <hr>
+                </div>
+
+                <div id="2.4">
+                  <h3>2.4 Operating Environment</h3>
+                  <p>
+Operating environment for the Classroom is as listed below
+
+<ol type="1"l>
+<li>Client/Server System</li>
+<li>Operating system: Windows/linux/macos/android</li>
+<li>Database: Firebase/MySQL </li>
+<li>platform: Java/JavaFX/Kotlin,Python/Django </li>
+</ol >
+
+                  </p>
+                  <br> <hr>
+                </div>
+
+                <div id="2.5">
+                  <h3>2.5 Design and Implementation Constraints</h3>
+                  <p>
+This system is provisioned to be built on the Django framework for web and Java for Android which is highly flexible.Decision regarding which database to use will be taken considering the fact that data being exchanged or stored is large, and the appropriate data management system will yield efficient performance.The other constraints are corporate, hardware limitations, specific technologies,communications protocols , security considerations.
+
+                  </p>
+                  <br> <hr>
+                </div>
+
+                <div id="2.6">
+                  <h3>2.6 User Documentation</h3>
+                  <p>
+
+                  <h4>User Documentation Components</h4>
+<ol type="1">
+<li>User Manuals </li>
+<li>User Guide Tutorials </li>
+<li>Hotline </li>
+<li>Email </li>
+</ol>
+                  </p>
+                  <br> <hr>
+                </div>
+
+                <div id="2.7">
+                  <h3>2.7 Assumptions and Dependencies</h3>
+                  <p>
+Device will be enabled with Internet.Teacher,students and admin need to have internet available and have the necessary skills and knowledge to work on the classroom. And user have all the dependencies installed on their machine.
+                  </p>
+                  <br> <hr>
+                </div>
+
+                <br><br>
+
+              <div><h1>3. External Interface Requirements</h1></div>
+
+                <div id="3.1">
+                  <h3>3.1 User Interfaces</h3>
+                  <p> It's mainly the comfortness of user when he/she using this application. and also the gui of this project how it styled. the loading, 
+                    redirect link , button working writely . the webcam took pictures on right time , the availability of stored data all are presented on a efficient screen interface.  </p>
+                  <br> <hr>
+                </div>
+
+                <div id="3.2">
+                  <h3>3.2 Hardware Interfaces</h3>
+                  <p>Since the application must run over the internet, all the hardware shall require to connect internet will be hardware interface for the system. As for e.g. Modem, WAN – LAN, Ethernet Cross-Cable.</p>
+                  <br> <hr>
+                </div>
+
+                <div id="3.3">
+                  <h3>3.3 Software Interfaces</h3>
+                  <ol type="1">
+                    <li>	Teachers and students should be able to sign up to the system.</li>
+                    <li>	Students need to provide a recent photograph when signing up.</li>
+                    <li>	Teachers should be able to create classroom</li>
+                    <li>  Teachers should be able to send invitation code to students</li>
+                    <li>	Students can join classroom through invitation code</li>
+                    <li>	Teacher can assign PDF files as reading material to students in a class</li>
+                    <li>	Students can see their reading tasks and deadlines on a per-class basis but also as a unified list</li>
+                    <li>	When a student decides to read a particular material, the system will open and display the
+                      material by itself (no download allowed)
+                      </li>
+                    <li>	Material will be presented one page/slide/content-group at a time</li>
+                    <li>	Students should be able to zoom in and out in the material
+                     <br>
+                      10.1 Questions can be written down<br>
+                     10.2 Questions can be asked verbally, which the system will record<br>
+                     10.3 Questions can be tagged to particular parts of the material which the student can highlight
+
+                    </li>
+                    <li>	Student questions are recorded/stored and are accessible to the teacher through a suitable
+                      interface. This interface should also present any relevant section the student has highlighted while asking the question.
+                      </li>
+                    <li>	When students are reading the material, the system will take photographs of the student via the
+                      webcam or the phone camera. These photographs will be stored in the back end and the teacher can see a reel of these images tagged with the content being displayed.
+                      </li>
+                    <li>	The system should run a face recognition module to ensure that the person in front of the camera is indeed the student and not someone else.</li>
+                    
+                    
+
+                  </ol>
+
+                  <br> <hr>
+                </div>
+
+                <div id="3.4">
+                  <h3>3.4 Communications Interfaces</h3>
+                  <p>This project supports all types of web browsers and android devices and the database is same. The system shall use the HTTP protocol for communication over the internet and for the intranet communication will be through TCP/IP protocol suite</p>
+                  <br> <hr>
+                </div>
+
+                <br><br>
+
+              <div><h1>4. System Features</h1></div>
+              <div id="4.1">
+                <h3>4.1 Description and Priority</h3>
+                <p>The  system should  be stored into storage defined by the University using a simple document system capable search and retrieval for attaching the same. Because it is a LMS system that is most important for university to manage all teacher and students. It will save time for university to handle everything.</p>
+                <br> <hr>
+              </div>
+
+              <div id="4.2">
+                <h3>4.2 Stimulus/Response Sequences</h3>
+                <ul>
+                    <li>A classroom interface to interact with teacher and students, uploaded documents and receive notifications.</li>
+                    <li>Users can read the uploaded file.</li>
+                    <li>Users will get notifications through if there is any update on their section's classroom</hli>
+                  </ul>
+                <br> <hr>
+              </div>
+
+              <div id="4.3">
+                <h3>4.3 Functional Requirements</h3>
+                <p>REQ-1 :The system  should have only one database where various platform user  can access.</p>
+                <p>REQ-2: Functionalities should be available from a web based system as well as an Android phone
+                  application.
+                  <ul>
+                    
+                  </ul>
+                </p>
+
+                <br> <hr>
+              </div>
+                <div><h1>5. Other Nonfunctional Requirements</h1></div>
+
+                  <div id="5.1">
+                    <h3>5.1 Performance Requirements</h3>
+                    <p>
+
+                      The system will be interactive, and the delays involved will be less. So, in every action-response of the system, there are no immediate delays. In case of opening windows, forms of popping error messages and saving the settings or sessions there is delay much below 2 seconds, in case of opening databases, sorting questions and evaluation there are no delays, and the operation is performed in less than 2 seconds for opening, sorting, computing, posting the files. The performance of the system is dependent on how the load is delivered to the system. Due to increase workload, a peak workload will be defined.
+
+                    </p>
+                    <br> <hr>
+                  </div>
+
+                  <div id="5.2">
+                    <h3>5.2 Safety Requirements</h3>
+                    <p>
+System failure, login issues, account creation and password reset failure will cause  damage or loss  to the system. A backup system will
+ be there for system failure which will be in archival storage.Information transmission should be securely transmitted to server without
+any changes in information.
+
+                    </p>
+                    <br> <hr>
+                  </div>
+
+                  <div id="5.3">
+                    <h3>5.3 Security Requirements</h3>
+                    <p>
+Security requirements includes authentication, authorization, data protection and so on . Authentication ensures that each entity
+involved in using a the service—the requestor, the provider, and the broker —is what it actually claims to be.
+Authorization determines whether the service provider has granted access to the Web service to the requestor.
+Data protection ensures that the Web servicerequest and response have not been tampered with en route.
+The main security concern is for users account hence proper login mechanism should be used to avoid hacking. The tablet id registration
+ is way to spam check for increasing the security. Hence, security is provided from unwanted use of recognition software.
+
+
+                    </p>
+                    <br> <hr>
+                  </div>
+
+                  <div id="5.4">
+                    <h3>5.4 Software Quality Attributes</h3>
+<ul>
+
+<h4><li>Availability </li></h4>
+<p>The System should be available on the specified date and specified time when many are required to use the product.</p>
+<h4><li>Correctness </li></h4>
+<p>The important aspects to consider in some environments are the professionalism and effectiveness of the website that could be
+ measured through how many different platforms are supported and it supports adaptivity and adaptability for a personalization </p>
+<h4><li>Maintainability </li></h4>
+<p>Admins will maintain the  ease and speed with which the system can be restored to operational status after a failure occurs </p>
+<h4><li>Usability </li></h4>
+<p> The system will be able to satisfy a maximum number of User needs</p>
+<h4><li>Reliabity </li></h4>
+<p> The system will be aware of bias,look for sites with expertise, check the date ,avoid anonymous authors and check links </p>
+
+
+</ul>
+                    <p>
+
+
+                    </p>
+                    <br> <hr>
+                  </div>
+
+                  <div id="5.5">
+                    <h3>5.5 Business Rules</h3>
+                    <p>
+The system will include privacy policies,cookie consent notices , plagiarism and copyright laws , terms and conditions and disclaimer.
+
+
+                    </p>
+                    <br> <hr>
+                  </div>
+
+                  <br><br>
+
+                <div id="6"><h1>6. Other Requirements</h1></div>
+                <ul>
+                    
+                    <li>System will took picture backup of student when they read text-files</li>
+                    <li>Database will be creat and maintaine don MySQL</li>
+                    <li>System access user personal data like his/he rpicture</li>
+                    <li>User have to accept the terms and policy while sign up</li>
+                 
+                  </ul>
+                <br> <hr>
+
+
+                <div id="AP_A"><h1>Appendix A: Glossary</h1></div>
+                <ul>
+                  <li>DBMS: Database management system will store, retrieve, define, and manage data in a database.</li>
+                  <li>API:Application programming Interface is a software intermediary that allows two applications to talk to each other.</li>
+                  <li>SOA:Software Oriented Architecture makes it possible for adding new features</li>
+                  <li>HTML: Hypertext Markup Language for documents designed to be displayed in a web browser.</li>
+                  
+
+
+                </ul>
+                <br> <hr>
+
+
+                <div id="AP_B"><h1>Appendix B: Analysis Models</h1></div>
+                <h4>List of Actors:</h4>
+                <ol>
+                  <li>Officials (Administrator, Teacher)</li>
+                  <li>Student</li>
+                </ol>
+                <h4>Functionalities:</h4>
+                <ul>
+
+                  <li>Student and teacher both can sign up with their picture</li>
+                  <li>User can logged in with respective mail and password</li>
+                  <li>Teacher Can create Clasroom sent invitation code to student</li>
+                  <li>Teacher can assign reading task with uploading PDF files</li>
+                  <li>System will took student picture in a time gaph when they read PDf files</li>
+                  <li>Student can ask question by highlighting , voice recprding and writting </li>
+                 
+                  
+
+                </ul>
+
+                 
+
+
+                <div id="AP_C"><h1>Appendix C: To Be Determined List</h1></div>
+                <ol>
+                  
+                </ol>
+                <ol>
+                  <h3>From 2.2: </h3>
+
+                  
+                     <ul>
+
+                      <li>Sample Diagram</li>
+                      <li>Object Class Diagram</li>
+                      <li>Programmign Standards</li>
+                      <li>External Factor Dependencies</li>
+                     </ul>
+                    
+                      <h3>From 5.4:  </h3>
+
+                      <ul>
+
+                        <li>Interoperability</li>
+                        <li>Reusability</li>
+                        <li>Robustness</li>
+                        <li>Testability</li>
+                       </ul>
+
+                  
+                  
+                </ol>
+                <br> <hr>
+
+
+
+
+
+
+
+
+
+
+            </div>
+            </td>
+            </tr>
+        </table>
+    </body>
+</html>
