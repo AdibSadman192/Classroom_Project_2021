@@ -1,0 +1,12 @@
+VirtualenvFolder=myroom
+projectfolder=room
+appfolder=classroom
+Pollsapp=poll
+allwebpages=templates
+
+
+//to run
+python manage.py runsever
+
+//to activate VirtualenvFolder
+myroom\Scripts\activate
